@@ -1,0 +1,6 @@
+{
+  "name": "Keyword Combination Generator",
+  "description": "Generate ribuan kombinasi keyword secara otomatis. Cocok untuk SEO, Local SEO, Marketplace, Google Ads, dan riset keyword.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
