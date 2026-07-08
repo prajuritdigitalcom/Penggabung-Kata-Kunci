@@ -22,12 +22,6 @@ export default function OptionsCard({ options, onChangeOptions }: OptionsCardPro
       description: 'Menghapus hasil kata kunci yang sama menggunakan JavaScript Set().',
     },
     {
-      key: 'ignoreCaseDuplicates' as const,
-      label: 'Abaikan Duplikat Huruf Besar/Kecil',
-      description: 'Menganggap "jakarta", "Jakarta", dan "JAKARTA" sebagai kata kunci yang sama.',
-      dependency: 'removeDuplicates',
-    },
-    {
       key: 'sortAZ' as const,
       label: 'Urutkan Sesuai Abjad (A-Z)',
       description: 'Mengurutkan hasil kombinasi kata kunci secara alfabetis.',
@@ -69,19 +63,14 @@ export default function OptionsCard({ options, onChangeOptions }: OptionsCardPro
 
       <div className="space-y-3">
         {optionItems.map((item) => {
-          const isDependent = item.dependency && item.dependency === 'removeDuplicates';
-          const isBlocked = isDependent && !options.removeDuplicates;
           const isActive = options[item.key];
 
           return (
             <button
               key={item.key}
-              onClick={() => !isBlocked && toggleOption(item.key)}
-              disabled={isBlocked}
+              onClick={() => toggleOption(item.key)}
               className={`w-full flex items-start text-left gap-3.5 p-3 rounded-xl border transition-all duration-150 ${
-                isBlocked
-                  ? 'bg-slate-50 border-slate-100 opacity-40 cursor-not-allowed'
-                  : isActive
+                isActive
                   ? 'bg-brand-light border-brand/25 text-slate-900 shadow-sm'
                   : 'bg-white border-slate-200 hover:border-brand/25 text-slate-700'
               }`}
