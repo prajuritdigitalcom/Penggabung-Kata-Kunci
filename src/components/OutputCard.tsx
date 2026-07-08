@@ -57,9 +57,6 @@ export default function OutputCard({
         
         {!hasOutput && !isGenerating && (
           <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center pointer-events-none">
-            <p className="text-sm text-slate-500 max-w-xs leading-relaxed">
-              Isi daftar kata kunci di sebelah kiri, sesuaikan opsi aturan, lalu klik <strong>Hubungkan Keyword</strong>.
-            </p>
           </div>
         )}
 

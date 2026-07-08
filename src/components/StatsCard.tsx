@@ -70,15 +70,13 @@ export default function StatsCard({ lists, stats }: StatsCardProps) {
             </span>
           </div>
           <div className="text-xs text-slate-500 max-w-xs leading-relaxed">
-            {isWarningLimit ? (
+            {isWarningLimit && (
               <span className="text-amber-800 flex items-start gap-1.5 bg-amber-50 p-2 rounded-lg border border-amber-200">
                 <AlertCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <span>
                   <strong>Output sangat besar!</strong> Di atas 300.000 kombinasi, browser mungkin menjadi lambat. Coba kurangi isi daftar.
                 </span>
               </span>
-            ) : (
-              "Dihitung secara instan dengan mengalikan jumlah item dari daftar yang aktif."
             )}
           </div>
         </div>
