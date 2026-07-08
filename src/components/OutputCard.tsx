@@ -28,17 +28,21 @@ export default function OutputCard({
   const joinedOutput = output.join('\n');
 
   return (
-    <div className="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm flex flex-col h-full">
+    <div className="bg-white border border-rose-100/85 rounded-2xl p-6 shadow-[0_8px_30px_rgb(254,76,111,0.02)] flex flex-col h-full">
       <div className="flex items-center justify-between mb-4 pb-4 border-b border-slate-100">
         <div>
+          <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-brand-light border border-brand/20 text-[10px] font-bold text-brand uppercase tracking-wider mb-2">
+            <span className="w-1 h-1 rounded-full bg-brand"></span>
+            Langkah 3
+          </div>
           <h2 className="text-lg font-bold text-slate-900">Output Kombinasi</h2>
-          <p className="text-xs text-slate-500">
+          <p className="text-xs text-slate-500 mt-1">
             Lihat, salin, atau unduh hasil penggabungan kata kunci Anda.
           </p>
         </div>
         <div className="flex items-center gap-2">
           <span className="text-xs font-mono font-bold text-brand bg-brand-light px-2.5 py-1 rounded-md border border-brand/20">
-            {new Intl.NumberFormat().format(output.length)} Keyword
+            {new Intl.NumberFormat().format(output.length)} Hasil
           </span>
         </div>
       </div>

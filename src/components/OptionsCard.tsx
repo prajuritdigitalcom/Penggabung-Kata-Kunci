@@ -50,13 +50,19 @@ export default function OptionsCard({ options, onChangeOptions }: OptionsCardPro
   ];
 
   return (
-    <div className="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm">
+    <div className="bg-white border border-rose-100/85 rounded-2xl p-6 shadow-[0_8px_30px_rgb(254,76,111,0.02)]">
       <div className="flex items-center gap-2 mb-4 pb-4 border-b border-slate-100">
-        <Settings className="w-5 h-5 text-brand" />
-        <div>
-          <h2 className="text-lg font-bold text-slate-900">Opsi Hasil Proses</h2>
-          <p className="text-xs text-slate-500">
-            Aturan ini akan diterapkan secara berurutan setelah penggabungan selesai dibuat.
+        <div className="flex-1">
+          <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-brand-light border border-brand/20 text-[10px] font-bold text-brand uppercase tracking-wider mb-2">
+            <span className="w-1 h-1 rounded-full bg-brand"></span>
+            Langkah 2
+          </div>
+          <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+            <Settings className="w-4 h-4 text-brand" />
+            Opsi Hasil Proses
+          </h2>
+          <p className="text-xs text-slate-500 mt-1">
+            Aturan penyaringan otomatis setelah kata kunci digabungkan.
           </p>
         </div>
       </div>

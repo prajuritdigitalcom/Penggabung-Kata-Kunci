@@ -33,7 +33,7 @@ export default function StatsCard({ lists, stats }: StatsCardProps) {
   return (
     <div className="space-y-6">
       {/* Live Estimation Panel */}
-      <div className="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm">
+      <div className="bg-white border border-rose-100/85 rounded-2xl p-6 shadow-[0_8px_30px_rgb(254,76,111,0.02)]">
         <div className="flex items-center gap-2 mb-4 pb-4 border-b border-slate-100">
           <TrendingUp className="w-5 h-5 text-brand" />
           <div>

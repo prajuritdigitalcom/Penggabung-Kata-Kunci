@@ -19,18 +19,22 @@ export default function KeywordInputCard({
   onClearList
 }: KeywordInputCardProps) {
   return (
-    <div className="bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm flex flex-col h-full">
+    <div className="bg-white border border-rose-100/85 rounded-2xl p-6 shadow-[0_8px_30px_rgb(254,76,111,0.02)] flex flex-col h-full">
       <div className="flex items-center justify-between mb-4 pb-4 border-b border-slate-100">
         <div>
+          <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-brand-light border border-brand/20 text-[10px] font-bold text-brand uppercase tracking-wider mb-2">
+            <span className="w-1 h-1 rounded-full bg-brand"></span>
+            Langkah 1
+          </div>
           <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-            Daftar Keyword
+            Daftar Kata Kunci
           </h2>
-          <p className="text-xs text-slate-500">
-            Masukkan satu keyword per baris. Daftar kosong akan otomatis dilewati saat penggabungan.
+          <p className="text-xs text-slate-500 mt-1">
+            Masukkan satu kata kunci per baris. Daftar kosong otomatis dilewati.
           </p>
         </div>
-        <span className="text-xs font-mono font-semibold px-2.5 py-1 bg-slate-100 border border-slate-200 text-slate-700 rounded-md">
-          {lists.length} Daftar
+        <span className="text-xs font-mono font-bold px-2.5 py-1 bg-slate-50 border border-slate-200 text-slate-600 rounded-lg">
+          {lists.length} Kolom
         </span>
       </div>
 

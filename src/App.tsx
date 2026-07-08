@@ -225,17 +225,38 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans">
+    <div className="min-h-screen bg-[#faf8f9] text-slate-800 flex flex-col font-sans">
       <Toaster position="top-right" theme="light" closeButton richColors />
       
       <Header />
 
-      <main className="max-w-7xl mx-auto w-full px-6 pb-16 flex-1">
-        {/* Two column responsive grid layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <main className="max-w-7xl mx-auto w-full px-4 sm:px-6 pb-16 flex-1">
+        {/* Progress Guide Banner */}
+        <div className="mb-6 bg-white border border-rose-100 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+          <div className="flex items-center gap-3">
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand/10 text-brand text-xs font-bold ring-4 ring-brand-light">
+              🚀
+            </span>
+            <div>
+              <h3 className="text-sm font-bold text-slate-900">Alur Kerja 3 Langkah Mudah</h3>
+              <p className="text-xs text-slate-500">Isi daftar kata kunci, sesuaikan opsi hasil di tengah, lalu dapatkan kombinasi instan di sebelah kanan.</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <button 
+              onClick={handleClearAll}
+              className="text-xs font-bold text-rose-500 hover:text-rose-600 bg-rose-50 hover:bg-rose-100/80 px-3.5 py-1.5 rounded-lg transition-colors"
+            >
+              Reset Semua Input
+            </button>
+          </div>
+        </div>
+
+        {/* 3 Column Grid Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
           
-          {/* Left panel: Config and lists input */}
-          <div className="lg:col-span-6 space-y-6 flex flex-col h-full">
+          {/* Kolom 1: Input daftar kata kunci */}
+          <div className="flex flex-col h-full">
             <KeywordInputCard
               lists={lists}
               onAddList={handleAddList}
@@ -243,7 +264,10 @@ export default function App() {
               onUpdateListText={handleUpdateListText}
               onClearList={handleClearList}
             />
+          </div>
 
+          {/* Kolom 2: Opsi pemrosesan & Estimasi */}
+          <div className="space-y-6 flex flex-col justify-between h-full">
             <OptionsCard
               options={options}
               onChangeOptions={setOptions}
@@ -255,8 +279,8 @@ export default function App() {
             />
           </div>
 
-          {/* Right panel: Final combinations output */}
-          <div className="lg:col-span-6 h-full">
+          {/* Kolom 3: Output & Tombol Eksekusi Utama */}
+          <div className="flex flex-col h-full">
             <OutputCard
               output={output}
               onGenerate={handleGenerate}
