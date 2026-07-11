@@ -298,9 +298,8 @@ export default function App() {
       </main>
 
       <footer className="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-500">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span>Keyword Combination Generator &copy; 2026</span>
-          <span>Bypass batasan, jalankan kueri lokal secepat kilat.</span>
+        <div className="max-w-7xl mx-auto px-6">
+          <span>&copy; 2026 Karya Prajurit Digital. Hak Cipta Dilindungi.</span>
         </div>
       </footer>
     </div>
